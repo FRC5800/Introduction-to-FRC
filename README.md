@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="assets/TeamTeam_Logo-IntroductionToFRC.png" style="width: 80%;"/>
+    <img src="Assets/Team_Logo-IntroductionToFRC.png" style="width: 80%;"/>
 </p>
 
 
