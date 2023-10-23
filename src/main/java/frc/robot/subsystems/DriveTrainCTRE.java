@@ -73,6 +73,11 @@ public class DriveTrainCTRE extends SubsystemBase {
     diffDrive.arcadeDrive(vel, ang);
   }
 
+  // Method used in autonomous commands
+  public void tankDrive(double leftVel, double rightVel) {
+    diffDrive.tankDrive(leftVel, rightVel);
+  }
+
   @Override
   public void periodic() {
     // This method will be called once per scheduler run

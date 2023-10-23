@@ -5,10 +5,13 @@
 package frc.robot;
 
 import frc.robot.Constants.OperatorConstants;
+import frc.robot.commands.Autos;
+import frc.robot.commands.MoveFoward;
 import frc.robot.subsystems.DriveTrainCTRE;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.RunCommand;
+import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -25,7 +28,7 @@ public class RobotContainer {
   private final XboxController driverController =
     new XboxController(OperatorConstants.kDriverControllerPort);
 
-  // Controller used to control the robot other subsystems than the DriveTrain
+  // Controller used to control the other robot subsystems than the DriveTrain
   private final XboxController coDriverController =
     new XboxController(OperatorConstants.kCoDriverControllerPort);
 
@@ -34,6 +37,7 @@ public class RobotContainer {
     /**
      * Add a default command to DriveTrain
      * default commands don't end and keep running all over the match
+     * RunCommand is used because drive() is not a command, but a method
       */
     driveTrain.setDefaultCommand(
       new RunCommand(() -> driveTrain.drive(driverController), driveTrain)
@@ -47,6 +51,8 @@ public class RobotContainer {
    * Method where the commands will be linked to the controller buttons
    */
   private void configureBindings() {
+    /* On JoystickButton() you will pass the controller that will be used, the button, and the command that will be runned */
+    new JoystickButton(driverController, XboxController.Button.kA.value).onTrue(/*your command goes here. Example:*/new MoveFoward(driveTrain, 2));
   }
 
   /**
@@ -56,6 +62,6 @@ public class RobotContainer {
    */
   public Command getAutonomousCommand() {
     // An example command will be run in autonomous
-    return null;
+    return Autos.autonomousRoutine1(driveTrain, 3);
   }
 }
