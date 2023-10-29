@@ -53,6 +53,8 @@ public class RobotContainer {
   private void configureBindings() {
     /* On JoystickButton() you will pass the controller that will be used, the button, and the command that will be runned */
     new JoystickButton(driverController, XboxController.Button.kA.value).onTrue(/*your command goes here. Example:*/new MoveFoward(driveTrain, 2));
+    // Same example but with a different controller
+    new JoystickButton(coDriverController, XboxController.Button.kA.value).onTrue(/*your command goes here. Example:*/new MoveFoward(driveTrain, 2));
   }
 
   /**
