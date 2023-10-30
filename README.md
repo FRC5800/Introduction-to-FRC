@@ -2,6 +2,9 @@
     <img src="Assets/Team_Logo-IntroductionToFRC.png" style="width: 80%;"/>
 </p>
 
+[![Static Badge](https://img.shields.io/badge/pt-br?logo=java&label=readme)](https://github.com/FRC5800/Introduction-to-FRC/blob/master/README-pt.md)
+[![Static Badge](https://img.shields.io/badge/en-blue?logo=java&label=readme)](https://github.com/FRC5800/Introduction-to-FRC/blob/master/README.md)
+
 
 # Introduction to FRC
 # What is FRC
