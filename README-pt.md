@@ -2,6 +2,9 @@
     <img src="Assets/Team_Logo-IntroducaoAFRC.png" style="width: 80%;"/>
 </p>
 
+[![Static Badge](https://img.shields.io/badge/pt-br?logo=java&label=readme)](https://github.com/FRC5800/Introduction-to-FRC/blob/master/README-pt.md)
+[![Static Badge](https://img.shields.io/badge/en-blue?logo=java&label=readme)](https://github.com/FRC5800/Introduction-to-FRC/blob/master/README.md)
+
 # Introdução à FRC
 # O que é FRC
 A First Robotics Competition (FRC) é uma das modalidades de competição [First ](https://www.firstinspires.org/about/vision-and-mission). É uma competição feita para alunos do ensino médio, com o intuito de potencializar seus habilidades e prepará-los para o mercado de trabalho. [Clique para mais](https://www.firstinspires.org/robotics/frc).
