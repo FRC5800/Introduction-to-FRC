@@ -11,7 +11,7 @@ A First Robotics Competition (FRC) é uma das modalidades de competição [First
 # Objetivo do Repositório
 Este repositório tem como objetivo ser um guia inicial para qualquer equipe FRC, contando com alguns conceitos básicos de programação e um "overview" das principais e essenciais ferramentas usadas na competição.
 # Documentação Detalhada
-Para ter acesso a uma documentação detalhada dos principais conceitos FRC, acessa a nossa wiki para mais informações. Uma observação importante é que a documentação é feita especialmente para a linguagem Java.
+Para ter acesso a uma documentação detalhada dos principais conceitos FRC, acessa a nossa [wiki](https://github.com/FRC5800/Introduction-to-FRC/wiki) para mais informações. Uma observação importante é que a documentação é feita especialmente para a linguagem Java.
 # Guias Auxiliares
 Além dessa documentação, recomendamos fortemente que sejam consultados outros materias de auxílio, principalmnte os da própria competição. Abixo serão listados alguns links para documentações a parte:
 - [FRC WPILib Documentation](https://docs.wpilib.org/en/stable/docs/zero-to-robot/introduction.html)
