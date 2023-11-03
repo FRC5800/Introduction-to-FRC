@@ -17,3 +17,5 @@ To access detailed documentation of the main FRC concepts, access our [wiki](htt
 In addition to this documentation, we strongly recommend that you consult other documentations, especially those from the competition itself. Below are some links to separate documentation:
 - [FRC WPILib Documentation](https://docs.wpilib.org/en/stable/docs/zero-to-robot/introduction.html)
 - [WPILib Example Codes](https://github.com/wpilibsuite/allwpilib/tree/main/wpilibjExamples/src)
+# Contribution
+If you want to contribute to the documentation, don't be afraid to point out spelling errors, failed explanations, missing tools, etc. If you have suggestions for improvements, write an Issue or a Pull request, and we will be willing to evaluate the improvements.
