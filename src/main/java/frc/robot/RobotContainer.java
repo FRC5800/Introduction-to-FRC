@@ -9,6 +9,8 @@ import frc.robot.commands.Autos;
 import frc.robot.commands.MoveFoward;
 import frc.robot.subsystems.DriveTrainCTRE;
 import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
@@ -32,6 +34,9 @@ public class RobotContainer {
   private final XboxController coDriverController =
     new XboxController(OperatorConstants.kCoDriverControllerPort);
 
+    SendableChooser<Command> chooser = new SendableChooser<Command>();
+    
+
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
     /**
@@ -45,6 +50,11 @@ public class RobotContainer {
 
     // Configure the trigger bindings
     configureBindings();
+    chooser.setDefaultOption("comando1", new MoveFoward(driveTrain, 2, 0.2));
+    chooser.addOption("comando2", new MoveFoward(driveTrain, 5, 0.5));
+    chooser.addOption("comando3", new MoveFoward(driveTrain, 8, 0.8));
+
+    SmartDashboard.putData(chooser);
   }
 
   /**
@@ -52,9 +62,9 @@ public class RobotContainer {
    */
   private void configureBindings() {
     /* On JoystickButton() you will pass the controller that will be used, the button, and the command that will be runned */
-    new JoystickButton(driverController, XboxController.Button.kA.value).onTrue(/*your command goes here. Example:*/new MoveFoward(driveTrain, 2));
+    new JoystickButton(driverController, XboxController.Button.kA.value).onTrue(/*your command goes here. Example:*/new MoveFoward(driveTrain, 2, 0.5));
     // Same example but with a different controller
-    new JoystickButton(coDriverController, XboxController.Button.kA.value).onTrue(/*your command goes here. Example:*/new MoveFoward(driveTrain, 2));
+    new JoystickButton(coDriverController, XboxController.Button.kA.value).onTrue(/*your command goes here. Example:*/new MoveFoward(driveTrain, 2, 0.5));
   }
 
   /**
@@ -64,6 +74,6 @@ public class RobotContainer {
    */
   public Command getAutonomousCommand() {
     // An example command will be run in autonomous
-    return Autos.autonomousRoutine1(driveTrain, 3);
+    return chooser.getSelected();
   }
 }

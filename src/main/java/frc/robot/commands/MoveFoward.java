@@ -21,10 +21,12 @@ public class MoveFoward extends CommandBase {
   // Creates a timer using WPILib that will control the command
   Timer timer = new Timer();
   double runningTime = 0;
+  double speed = 0;
   
-  public MoveFoward(DriveTrainCTRE driveTrain, double runningTime) {
+  public MoveFoward(DriveTrainCTRE driveTrain, double runningTime, double speed) {
     this.driveTrain = driveTrain;
     this.runningTime = runningTime;
+    this.speed = speed;
 
     addRequirements(driveTrain);
   }
@@ -42,7 +44,7 @@ public class MoveFoward extends CommandBase {
   @Override
   public void execute() {
     // Set 50% of the total voltage on the DriveTrain motors
-    driveTrain.tankDrive(0.5, 0.5);
+    driveTrain.tankDrive(speed, speed);
   }
 
   // Called once the command ends or is interrupted.

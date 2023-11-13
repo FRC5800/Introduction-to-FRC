@@ -9,8 +9,8 @@ import frc.robot.subsystems.DriveTrainCTRE;
 
 public final class Autos {
   /** Example static factory for an autonomous command. */
-  public static Command autonomousRoutine1(DriveTrainCTRE driveTrain, double runningTime) {
-    return new MoveFoward(driveTrain, runningTime);
+  public static Command autonomousRoutine1(DriveTrainCTRE driveTrain, double runningTime, double speed) {
+    return new MoveFoward(driveTrain, runningTime, speed);
   }
 
   // Its methods are statics, so objects are not created
